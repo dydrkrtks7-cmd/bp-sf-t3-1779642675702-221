@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>글 목록 (2/3) · sf-t3-1779642675702-221</title>
+  <meta name="description" content="sf-t3-1779642675702-221에 올라온 글 목록입니다.">
+  <link rel="canonical" href="https://sf-t3-1779642675702-221.maphoshirts.xyz/posts-2.html">
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <style>
+ *, *::before, *::after {
+ margin: 0;
+ padding: 0;
+ box-sizing: border-box;
+ }
+ html {
+ scroll-behavior: smooth;
+ }
+ body {
+ font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+ background-color: #FDF8F0;
+ color: #1A1A2E;
+ line-height: 1.7;
+ overflow-x: hidden;
+ }
+ .container {
+ max-width: 1200px;
+ margin: 0 auto;
+ padding: 0 24px;
+ }
+ header {
+ background: linear-gradient(135deg, #1A1A2E 0%, #16213E 100%);
+ padding: 16px 0;
+ position: sticky;
+ top: 0;
+ z-index: 1000;
+ box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+ }
+ .nav-container {
+ max-width: 1200px;
+ margin: 0 auto;
+ padding: 0 24px;
+ display: flex;
+ justify-content: space-between;
+ align-items: center;
+ }
+ .logo {
+ color: #FDF8F0;
+ font-size: 1.6rem;
+ font-weight: 800;
+ letter-spacing: -0.5px;
+ text-decoration: none;
+ }
+ .logo span {
+ color: #D4A853;
+ }
+ .nav-links {
+ display: flex;
+ gap: 32px;
+ align-items: center;
+ }
+ .nav-links a {
+ color: #B8B8C8;
+ text-decoration: none;
+ font-size: 0.95rem;
+ font-weight: 500;
+ transition: color 0.3s ease;
+ letter-spacing: 0.3px;
+ }
+ .nav-links a:hover {
+ color: #D4A853;
+ }
+ .nav-cta {
+ background: #D4A853;
+ color: #1A1A2E !important;
+ padding: 10px 24px;
+ border-radius: 8px;
+ font-weight: 700 !important;
+ transition: all 0.3s ease;
+ }
+ .nav-cta:hover {
+ background: #E5C06A;
+ transform: translateY(-1px);
+ }
+ .hamburger {
+ display: none;
+ flex-direction: column;
+ cursor: pointer;
+ gap: 5px;
+ }
+ .hamburger span {
+ width: 28px;
+ height: 3px;
+ background: #FDF8F0;
+ border-radius: 3px;
+ transition: 0.3s;
+ }
+ @media (max-width: 768px) {
+ .nav-links {
+ display: none;
+ position: absolute;
+ top: 70px;
+ left: 0;
+ right: 0;
+ background: #1A1A2E;
+ flex-direction: column;
+ padding: 24px;
+ gap: 16px;
+ border-bottom: 2px solid #D4A853;
+ }
+ .nav-links.active {
+ display: flex;
+ }
+ .hamburger {
+ display: flex;
+ }
+ .nav-cta {
+ text-align: center;
+ width: 100%;
+ }
+ }
+ .info-hero {
+ padding: 100px 0 60px;
+ background: linear-gradient(180deg, #1A1A2E 0%, #16213E 100%);
+ color: #FDF8F0;
+ position: relative;
+ overflow: hidden;
+ }
+ .info-hero::before {
+ content: '';
+ position: absolute;
+ top: -50%;
+ right: -20%;
+ width: 600px;
+ height: 600px;
+ background: radial-gradient(circle, rgba(212,168,83,0.08) 0%, transparent 70%);
+ border-radius: 50%;
+ }
+ .info-hero .container {
+ position: relative;
+ z-index: 1;
+ }
+ .info-hero h1 {
+ font-size: 3rem;
+ font-weight: 800;
+ letter-spacing: -1px;
+ line-height: 1.2;
+ margin-bottom: 24px;
+ max-width: 700px;
+ }
+ .info-hero h1 span {
+ color: #D4A853;
+ }
+ .info-hero p {
+ font-size: 1.15rem;
+ color: #B8B8C8;
+ max-width: 600px;
+ line-height: 1.8;
+ margin-bottom: 32px;
+ }
+ .info-hero .meta-badge {
+ display: inline-flex;
+ align-items: center;
+ gap: 8px;
+ background: rgba(212,168,83,0.15);
+ border: 1px solid rgba(212,168,83,0.3);
+ padding: 8px 20px;
+ border-radius: 50px;
+ font-size: 0.85rem;
+ color: #D4A853;
+ }
+ .info-grid {
+ padding: 80px 0;
+ }
+ .info-grid .container {
+ display: grid;
+ grid-template-columns: 1fr 1fr;
+ gap: 48px;
+ }
+ .info-card {
+ background: #FFFFFF;
+ border-radius: 16px;
+ padding: 40px;
+ box-shadow: 0 8px 32px rgba(0,0,0,0.06);
+ border: 1px solid rgba(212,168,83,0.1);
+ transition: transform 0.3s ease, box-shadow 0.3s ease;
+ }
+ .info-card:hover {
+ transform: translateY(-4px);
+ box-shadow: 0 12px 40px rgba(0,0,0,0.1);
+ }
+ .info-card h2 {
+ font-size: 1.5rem;
+ font-weight: 700;
+ color: #1A1A2E;
+ margin-bottom: 16px;
+ letter-spacing: -0.3px;
+ }
+ .info-card .card-icon {
+ font-size: 2rem;
+ margin-bottom: 12px;
+ }
+ .info-card p {
+ color: #4A4A5A;
+ line-height: 1.8;
+ margin-bottom: 16px;
+ }
+ .info-card ul {
+ list-style: none;
+ padding: 0;
+ }
+ .info-card ul li {
+ padding: 8px 0;
+ padding-left: 24px;
+ position: relative;
+ color: #4A4A5A;
+ }
+ .info-card ul li::before {
+ content: '▸';
+ position: absolute;
+ left: 0;
+ color: #D4A853;
+ font-weight: 700;
+ }
+ .stats-row {
+ display: grid;
+ grid-template-columns: repeat(3, 1fr);
+ gap: 24px;
+ padding: 60px 0;
+ border-top: 1px solid rgba(212,168,83,0.2);
+ border-bottom: 1px solid rgba(212,168,83,0.2);
+ margin: 0 24px;
+ }
+ .stat-item {
+ text-align: center;
+ }
+ .stat-item .number {
+ font-size: 2.5rem;
+ font-weight: 800;
+ color: #D4A853;
+ display: block;
+ }
+ .stat-item .label {
+ color: #4A4A5A;
+ font-size: 0.95rem;
+ margin-top: 4px;
+ }
+ .faq-section {
+ padding: 80px 0;
+ background: #FFFFFF;
+ }
+ .faq-section h2 {
+ text-align: center;
+ font-size: 2rem;
+ font-weight: 700;
+ color: #1A1A2E;
+ margin-bottom: 48px;
+ letter-spacing: -0.5px;
+ }
+ .faq-item {
+ max-width: 800px;
+ margin: 0 auto 16px;
+ border: 1px solid rgba(212,168,83,0.15);
+ border-radius: 12px;
+ overflow: hidden;
+ transition: box-shadow 0.3s ease;
+ }
+ .faq-item:hover {
+ box-shadow: 0 4px 16px rgba(0,0,0,0.05);
+ }
+ .faq-question {
+ padding: 20px 24px;
+ background: #FDF8F0;
+ font-weight: 600;
+ color: #1A1A2E;
+ cursor: pointer;
+ display: flex;
+ justify-content: space-between;
+ align-items: center;
+ }
+ .faq-question::after {
+ content: '+';
+ font-size: 1.3rem;
+ color: #D4A853;
+ transition: transform 0.3s ease;
+ }
+ .faq-question.active::after {
+ transform: rotate(45deg);
+ }
+ .faq-answer {
+ padding: 0 24px;
+ max-height: 0;
+ overflow: hidden;
+ transition: max-height 0.3s ease, padding 0.3s ease;
+ color: #4A4A5A;
+ line-height: 1.8;
+ }
+ .faq-answer.open {
+ padding: 20px 24px;
+ max-height: 300px;
+ }
+ .cta-section {
+ padding: 80px 0;
+ background: linear-gradient(135deg, #1A1A2E 0%, #16213E 100%);
+ text-align: center;
+ color: #FDF8F0;
+ }
+ .cta-section h2 {
+ font-size: 2rem;
+ font-weight: 700;
+ margin-bottom: 16px;
+ }
+ .cta-section p {
+ color: #B8B8C8;
+ max-width: 500px;
+ margin: 0 auto 32px;
+ }
+ .cta-button {
+ display: inline-block;
+ background: #D4A853;
+ color: #1A1A2E;
+ padding: 16px 48px;
+ border-radius: 12px;
+ font-weight: 700;
+ font-size: 1.05rem;
+ text-decoration: none;
+ transition: all 0.3s ease;
+ }
+ .cta-button:hover {
+ background: #E5C06A;
+ transform: translateY(-2px);
+ }
+ footer {
+ background: #1A1A2E;
+ padding: 32px 0;
+ border-top: 1px solid rgba(212,168,83,0.1);
+ }
+ footer .container {
+ display: flex;
+ justify-content: space-between;
+ align-items: center;
+ flex-wrap: wrap;
+ gap: 16px;
+ }
+ footer p {
+ color: #6A6A7A;
+ font-size: 0.85rem;
+ }
+ footer a {
+ color: #D4A853;
+ text-decoration: none;
+ }
+ @media (max-width: 768px) {
+ .info-hero h1 {
+ font-size: 2rem;
+ }
+ .info-grid .container {
+ grid-template-columns: 1fr;
+ }
+ .stats-row {
+ grid-template-columns: 1fr;
+ gap: 32px;
+ }
+ .faq-section h2 {
+ font-size: 1.5rem;
+ }
+ }
+ </style>
+  <meta property="og:title" content="글 목록 (2/3) · sf-t3-1779642675702-221">
+  <meta property="og:description" content="sf-t3-1779642675702-221에 올라온 글 목록입니다.">
+  <meta property="og:url" content="https://sf-t3-1779642675702-221.maphoshirts.xyz/posts-2.html">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary">
+</head>
+<body>
+  <div class="container">
+    <header>
+ <div class="nav-container">
+ <a href="/" class="logo"><span>PBN</span> 빌더</a>
+ <div class="nav-links" id="navLinks">
+ <a href="/">홈</a>
+ <a href="/info">정보</a>
+ <a href="/contact" class="nav-cta">상담 문의</a>
+ </div>
+ <div class="hamburger" id="hamburger" onclick="toggleMenu()">
+ 
+ 
+ 
+ </div>
+ </div>
+ </header>
+    <main>
+      <h1>글 목록</h1>
+      <p>전체 59개 · 2/3 페이지</p>
+      <ul class="post-list">
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260807-0462.html">마포 주식투자 분야의 PBN 빌더 운용과 정보 구조화 방안</a>
+        <p class="post-item__summary">마포 지역을 중심으로 한 주식투자 관련 정보 채널 구축 시 PBN 빌더 활용에 대한 논의가 활발히 진행되고 있습니다. 검색 엔진 최적화 과정에서 자체 검색 네트워크를 구축하는 기술은 관련 분야의 디</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260807-0463.html">마포 주식투자 환경의 PBN 빌더 운용 안내</a>
+        <p class="post-item__summary">마포 지역에서 주식투자 관련 웹 시스템을 운용할 때는 안정적인 서버 인프라와 검색엔진 최적화 전략이 함께 요구됩니다. PBN 빌더는 여러 독립 사이트를 체계적으로 구축하고 관리하도록 돕는 네트워크 </p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260807-0464.html">마포 주식투자 네트워크를 위한 PBN 빌더 안내</a>
+        <p class="post-item__summary">마포 지역에서 주식투자 관련 정보 채널을 운영하며 온라인 네트워크를 확장할 때 PBN 빌더 활용을 검토할 수 있습니다. Private Blog Network(PBN)는 독립적인 웹 사이트 자산을 구</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260807-0465.html">마포 주식투자 정보 시스템과 PBN 빌더 활용 안내</a>
+        <p class="post-item__summary">마포 지역에서 주식투자 관련 정보 네트워크를 구축하거나 마케팅 구조를 기획할 때는 PBN 빌더 시스템의 특징을 충분히 이해하는 것이 중요합니다. PBN 빌더는 다수의 웹사이트를 효율적으로 운영하며 </p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260807-0466.html">마포 주식투자 관련 PBN 빌더 활용 안내</a>
+        <p class="post-item__summary">마포 지역을 기반으로 주식투자 온라인 플랫폼을 운용할 때 PBN 빌더 시스템의 도입을 검토하는 사례가 있습니다. PBN 빌더란 검색엔진 노출을 도모하고자 여러 독립 웹사이트를 체계적으로 구축하고 관</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260807-0467.html">마포 주식투자 네트워크와 PBN 빌더 활용 안내</a>
+        <p class="post-item__summary">마포 지역에서 주식투자 관련 정보 네트워크를 구축하고 마케팅 자산을 관리할 때 PBN 빌더 도입을 검토할 수 있습니다. 프라이빗 블로그 네트워크는 검색엔진 최적화 관점에서 페이지 간 주제 연관성을 </p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260807-0469.html">마포 지역 주식투자 정보 관리와 PBN 빌더 안내</a>
+        <p class="post-item__summary">마포 지역에서 주식투자 관련 웹 네트워크를 구축하거나 정보 전달 체계를 설계할 때 PBN 빌더 활용에 대한 관심이 높아지고 있습니다. 검색 엔진 최적화와 효율적인 사이트 운영을 돕는 네트워크 기술은</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260807-0470.html">마포 주식투자 정보와 PBN 빌더 안내</a>
+        <p class="post-item__summary">마포 지역에서 주식투자 관련 정보나 금융 서비스를 탐색할 때 인터넷 검색 엔진을 통한 정보 수집은 매우 중요한 과정입니다. 이러한 온라인 정보 환경에서는 다양한 자산운용 정보와 가이드가 디지털 매체</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260807-0471.html">마포 주식투자 분야 PBN 빌더 활용 및 키워드 분석 안내</a>
+        <p class="post-item__summary">서울 마포 지역의 주식투자 정보 매체들은 검색 엔진 노출 범위를 넓히기 위해 다양한 마케팅 기술을 도입하고 있습니다. 그중 PBN 빌더는 여러 웹사이트 인프라를 효율적으로 구축하고 관리하여 특정 검</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260807-0472.html">마포 주식투자 분야의 PBN 빌더 활용 방법</a>
+        <p class="post-item__summary">마포 지역을 기반으로 활동하는 주식투자 관련 기업은 온라인 브랜드 자산을 효과적으로 구축하기 위해 디지털 마케팅 방안을 고려하게 됩니다. PBN 빌더 기법은 개별 웹사이트의 독립적인 관리 구조를 설</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260807-0473.html">마포 주식투자 분야 PBN 빌더 안내</a>
+        <p class="post-item__summary">마포 지역에서 주식투자 관련 서비스를 운영하는 기업들은 온라인상에서 브랜드 인지도와 신뢰도를 높이기 위해 다양한 디지털 마케팅 방식을 구사합니다. 그중 PBN 빌더는 검색엔진 최적화를 위한 네트워크</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260807-0474.html">마포 주식투자 분야 PBN 빌더 활용과 웹사이트 구조 분석 안내</a>
+        <p class="post-item__summary">마포 지역에서 주식투자 정보를 다루는 웹사이트를 운용할 때는 검색 노출을 위해 다양한 마케팅 솔루션이 활용됩니다. 그중 PBN 빌더는 여러 독립 블로그와 정보 사이트를 효율적으로 생성하고 관리하도록</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260807-0475.html">마포 지역 주식투자 관련 PBN 빌더 활용 및 정보 안내</a>
+        <p class="post-item__summary">서울 마포 지역의 주식투자 마케팅 분야에서는 검색 노출의 안정성과 효율적인 네트워크 관리를 위해 PBN 빌더 솔루션 도입을 검토하고 있습니다. 독립적인 도메인 자산을 체계적으로 배치하고 연계 구조를</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260807-0476.html">마포 지역 주식투자 마케팅과 PBN 빌더 활용 안내</a>
+        <p class="post-item__summary">마포 지역에서 주식투자 관련 온라인 플랫폼을 운영할 때 PBN 빌더 기법은 웹사이트의 검색 노출과 접근성을 체계적으로 관리하는 도구입니다. 독립적인 블로그와 웹 자산을 연계하여 주제별 콘텐츠 네트워</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260807-0477.html">마포 주식투자 영역의 PBN 빌더 활용 안내</a>
+        <p class="post-item__summary">마포 지역을 기반으로 하는 주식투자 정보 매체들은 검색 엔진 상위 노출과 브랜드 인지도 제고를 위해 웹 네트워크 전략을 수립합니다. 이 중 PBN 빌더는 복수의 웹사이트를 체계적으로 생성하고 관리하</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260807-0478.html">마포 주식투자 마케팅을 위한 PBN 빌더 활용 안내</a>
+        <p class="post-item__summary">마포 지역에서 주식투자 관련 정보 검색 및 마케팅을 진행할 때 PBN 빌더 구축 방식을 검토하는 경우가 많습니다. 프라이빗 블로그 네트워크는 독립된 웹사이트들을 체계적으로 구성하여 검색엔진 노출을 </p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260807-0479.html">마포 주식투자 분야의 PBN 빌더 활용과 지역 네트워크 구조</a>
+        <p class="post-item__summary">마포 지역을 거점으로 주식투자 마케팅 네트워크를 구축할 때 웹사이트의 검색 노출과 하이퍼링크 구조는 핵심적인 평가 요인입니다. 독립적 구조를 갖춘 PBN 빌더 솔루션은 여러 웹페이지를 효율적으로 관</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260807-0480.html">마포 지역 주식투자 네트워크와 PBN 빌더 활용 안내</a>
+        <p class="post-item__summary">마포 지역에서 주식투자 관련 정보 네트워크를 구축하고 마케팅 효율을 높이기 위해 PBN 빌더 기술을 다각도로 검토하는 사례가 늘고 있습니다. 개인 네트워크를 구성하는 백링크 구조는 검색 엔진 평가 </p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260807-0481.html">마포 주식투자 네트워크 구축과 PBN 빌더 활용 안내</a>
+        <p class="post-item__summary">마포 지역에서 주식투자 관련 온라인 마케팅을 추진할 때 효율적인 검색 노출 체계를 갖추는 것이 중요합니다. 네트워크를 구상하는 과정에서 PBN 빌더는 웹사이트를 체계적으로 관리하고 링크 자산을 구축</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260807-0482.html">마포 주식투자 분야의 PBN 빌더 활용 안내</a>
+        <p class="post-item__summary">서울 마포 지역의 주식투자 및 금융 마케팅 분야에서는 웹사이트 검색 노출을 위해 PBN 빌더 시스템을 활용합니다. 독립적인 웹 자산을 구축하여 키워드 접근성을 높이는 이 솔루션은 마케팅 네트워크의 </p>
+      </li>
+      </ul>
+    <nav class="pager">
+      <a class="pager__link" href="posts.html">1</a>
+      <span class="pager__current">2</span>
+      <a class="pager__link" href="posts-3.html">3</a>
+    </nav>
+    </main>
+  </div>
+</body>
+</html>
